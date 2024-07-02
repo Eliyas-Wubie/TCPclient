@@ -1,14 +1,16 @@
 import socket
 
-IP=str(input("insert IP: "))
-PORT=int(input("insert PORT: "))
+IP="192.168.1.104"
+PORT=27441
 s=socket.socket()
 s.connect((IP,PORT))
 
 while True:
-    res=s.recv(4000)
-    print(res)
     m=input("you> ")
     s.send(m.encode())
+    res=s.recv(4000)
+    print(res)
+
+
 
 s.close()
