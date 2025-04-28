@@ -1,7 +1,7 @@
 import socket
 
-IP="192.168.1.104"
-PORT=27441
+IP="127.0.0.1"
+PORT=2020
 s=socket.socket()
 s.connect((IP,PORT))
 
